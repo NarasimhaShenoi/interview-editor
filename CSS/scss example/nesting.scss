@@ -1,0 +1,52 @@
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      display: inline-block;
+    }
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+}
+
+/* Nesting is not possible in css
+  
+    nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    nav li {
+        display: inline-block;
+    }
+    nav a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+  
+*/
+
+/*
+ Many CSS properties have the same prefix, like font-family, font-size and font-weight or text-align, text-transform and text-overflow.
+ With Sass you can write them as nested properties:
+*/
+nav { 
+    font: {
+        family: Helvetica, sans-serif;
+        size: 18px;
+        weight: bold;
+    }
+}
+
+// The Sass transpiler will convert the above to normal CSS:
+nav {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}

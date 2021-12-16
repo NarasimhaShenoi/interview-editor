@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Angular JS
+    </title>
+</head>
+<body ng-app="myApp">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <div ng-controller="myController">
+         <p ng-repeat="employee in employees | orderBy:'-salary'"> 
+            First name is {{employee.fname | uppercase | limitTo: 3}}
+            last name is {{employee.lname | lowercase}}
+            salary is {{employee.salary | currency}}
+        </p>
+    </div>
+</body>
+</html>

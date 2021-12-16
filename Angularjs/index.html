@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Angular JS
+    </title>
+</head>
+<body ng-app ng-init="a=5;b=6;fname='Narasimha';lname='Shenoy';even=[2,4,6,8,10]">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <p>Product is {{a*b}}</p>
+    <p>Sum is <span ng-bind="a+b"></span></p>
+    <p>Full name is {{fname + " " + lname}}</p>
+    <p>First element of Array is {{even[0]}}</p>
+    <p>Second element of Array is <span ng-bind="even[1]"></span></p>
+
+    <p ng-repeat="number in even"> Numbers is {{number}}</p>
+</body>
+</html>

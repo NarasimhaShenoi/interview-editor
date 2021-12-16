@@ -1,0 +1,13 @@
+$myColor: red;
+$myFont: italic;
+
+h1 {
+  $myColor: green; /* only here the myColor will have green*/
+  $myFont: bold !global; /* update value of the global variable */ 
+  color: $myColor;
+}
+
+p {
+  color: $myColor; /* myColor will be red */
+  font: $myFont; /* myFont will be bold */
+}

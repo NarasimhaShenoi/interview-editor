@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            /* global variable */
+            :root {
+                --blue: #1e90ff;
+                --white: #ffffff;
+            }
+
+            body {
+                --white: #00ffff;                    /* local variable with same name will override global */
+                background-color: var(--blue);
+            }
+        </style>
+        <script>
+            let r =  document.querySelector(':root');
+            function updateColor() {
+                r.style.setProperty('--blue', 'lightblue');
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="updateColor()">Click me to change color</button>
+    </body>
+</html>

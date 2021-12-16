@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function clickHandlerForLocalStorage() {
+                if(typeof(Storage) !== undefined) {
+                    if(localStorage.clickCount) {
+                        localStorage.clickCount = Number(localStorage.clickCount) + 1;
+                    } else {
+                        localStorage.clickCount = 1;
+                    }
+                    document.getElementById("demo1").innerHTML = localStorage.clickCount;
+                } else {
+                    document.getElementById("demo1").innerHTML = "your browser doesnot support storage";
+                }
+            }
+            function clickHandlerForSessionStorage() {
+                if(typeof(Storage) !== undefined) {
+                    if(sessionStorage.clickCount) {
+                        sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
+                    } else {
+                        sessionStorage.clickCount = 1;
+                    }
+                    document.getElementById("demo2").innerHTML = sessionStorage.clickCount;
+                } else {
+                    document.getElementById("demo2").innerHTML = "your browser doesnot support storage";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Storage</h1>
+        <p id="demo1"></p>
+        <button onclick="clickHandlerForLocalStorage()">Click Me For updating local storage</button>
+
+        <br />
+        <p id="demo2"></p>
+        <button onclick="clickHandlerForSessionStorage()">Click Me For updating local storage</button>
+    </body>
+</html>

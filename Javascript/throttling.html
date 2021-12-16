@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let counter1 = 0;
+            let counter2 = 0;
+            function clickHandler() {
+                console.log('normal function', ++counter1);
+                // API calls
+            }
+            function clickHandlerForthrottling() {
+                console.log('Thottling function', ++counter2);
+                // API calls
+            }
+
+            function throttling(fn, delay) {
+                let flag = true;
+                return function() {
+                    if(flag) {
+                        flag = false;
+                        fn();
+                        setTimeout(()=> {
+                            flag =  true;
+                        }, delay);
+                    }
+                }
+            }
+            const clickHandlerWithThrottling = throttling(clickHandlerForthrottling, 2000);
+
+            window.addEventListener("resize", clickHandler);
+            window.addEventListener("resize", clickHandlerWithThrottling);
+
+
+        </script>
+    </head>
+    <body>
+        <h1>throttling example</h1>
+    </body>
+</html>

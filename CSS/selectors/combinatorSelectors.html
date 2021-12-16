@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div.childSelector > p {
+                color: red;
+            }
+
+            div.descendantSelector  p {
+                color: green;
+            }
+
+            div.generalSiblingSelector ~ p {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Combinator Selector</h2>
+
+        <!-- Selects all the elements-->
+        <div class="childSelector">
+            <p>Para1.</p>
+            <p>Para2.</p>
+            <p>Para3.</p>
+        </div>
+
+        <br />
+        
+        <!-- Selects all the elements-->
+        <div class="descendantSelector">
+            <p>Para1.</p>
+            <p>Para2.</p>
+            <p>Para3.</p>
+        </div>
+
+        <br />
+
+        <!-- Selects all the elements after this-->
+        <div class="generalSiblingSelector">
+            <p>Para1.</p>
+            <p>Para2.</p>
+            <p>Para3.</p>
+        </div>
+        <p>Para4.</p>
+        <p>Para5.</p>
+    </body>
+</html>
+
+

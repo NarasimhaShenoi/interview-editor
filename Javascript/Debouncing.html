@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let counter = 0;
+            function clickHandler() {
+                console.log('button clicked', ++counter);
+                // API calls
+            }
+
+            function debouncing(fn, delay) {
+                let timer;
+                return function() {
+                    clearTimeout(timer);
+                    timer =  setTimeout(() => {
+                        fn();
+                    }, delay);
+                }
+            }
+            const clickHandlerWithDebouncing = debouncing(clickHandler, 2000);
+
+
+        </script>
+    </head>
+    <body>
+        <input type="text" onkeypress="clickHandlerWithDebouncing()" />
+    </body>
+</html>

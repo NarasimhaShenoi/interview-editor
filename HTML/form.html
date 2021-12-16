@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="chandler.html">
+            <!--maxlength will not allow us to type more than specified letters-->
+            Username: <input type="text" name="name" maxlength="5"/> <br />
+            Password: <input type="password" name="password" maxlength="5"/><br />
+            Gender: <input type="radio" name="gender" value="male" checked />Male
+                    <input type="radio" name="gender" value="female" />Female<br />
+            Course: <input type="checkbox" name="gender" value="html" checked />HTML
+                    <input type="checkbox" name="gender" value="css" />CSS<br />
+            Age Group: <select name="age">
+                            <option>0-10</option>
+                            <option>10-20</option>
+                            <option>20-30</option>
+                            <option>30-40</option>
+                        </select><br />
+            Comment: <textarea name="comment" cols="30" rows="5"></textarea><br />
+            <input type="submit" value="Submit" />
+            <input type="reset" value="Reset" />
+            <input type="button" value="click me" />
+        </form>
+    </body>
+</html>

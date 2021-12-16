@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Angular JS
+    </title>
+</head>
+<body ng-app="myApp">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+
+    <div ng-controller="myController">
+        <button ng-click="count=count+1">Increment Counter</button>
+        <button ng-click="hideCounter()">Hide Counter</button>
+        <p ng-show="show">{{count}}</p>
+    </div>
+</body>
+</html>
